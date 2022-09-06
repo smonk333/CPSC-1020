@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -19,38 +20,36 @@ int main() {
   cin >> type;
 
   //switch statement to perform calculation or quit
-  switch (type){
-    case 1:
+  if(type == 1){
       cout << "input the length of a side:" << endl;
       cin >> length;
       area = length * length;
-      cout << "area is: " << area << endl;
-      break;
+      cout << "area is: " << setprecision(3) << area << endl;
+  }
 
-    case 2:
+  else if(type == 2){
       cout << "input the diameter:" << endl;
       cin >> length;
       area = length * PI;
-      cout << "area is: " << area << endl;
-      break;
-
-    case 3:
+      cout << "area is: " << setprecision(3) << area << endl;
+  }
+  
+  else if(type == 3){
       cout << "input the height" << endl;
       cin >> length;
       cout << "input the base" << endl;
       cin >> base;
       area = ((length * base) / 2);
-      cout << "area is: " << area << endl;
-      break;
+      cout << "area is: " << setprecision(3) << area << endl;
+  }
 
-    case 4:
+  else if(type == 4){
       cout << "exiting..." << endl;
       exit(0);
-      break;
+  }
 
-    default:
+  else {
       cout << "invalid option! exiting..." << endl;
       exit(1);
-      break;
   }
 }
