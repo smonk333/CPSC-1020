@@ -1,3 +1,6 @@
+//Function to calculate the retirement interest accrued
+//Garrett Boling
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
