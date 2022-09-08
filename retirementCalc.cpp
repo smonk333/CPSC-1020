@@ -26,11 +26,8 @@ int main()
 // send the data out for calculations, get the final answer back and store it in a variable
 	retirementSavings = compoundCalc(principle, rate, time);
 
-// setting fixed precision output
-	cout << fixed;
-	
 // printing output
-	cout << "The total amount in the account after this period of time will be: $" << setprecision(2) << retirementSavings << endl;
+	cout << "The total amount in the account after this period of time will be: $" << std::fixed << setprecision(2) << retirementSavings << endl;
 
 	return 0;
 }
