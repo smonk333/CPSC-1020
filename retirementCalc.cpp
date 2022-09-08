@@ -27,7 +27,7 @@ int main()
 	retirementSavings = compoundCalc(principle, rate, time);
 
 // printing output
-	cout << "The total amount in the account after this period of time will be: $" << setprecision(2) << retirementSavings << std::fixed << endl;
+	cout << "The total amount in the account after this period of time will be: $" << std::fixed << setprecision(2) << retirementSavings << endl;
 
 	return 0;
 }
