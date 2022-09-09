@@ -1,6 +1,5 @@
-// User enters the number of bike rides to campus and then displays the number of points awarded based on a given chart
-// Karina Castillo
-//
+// Program to calculate points awarded to students for riding their bikes to school, given the number of bike rides.
+// Garrett Boling
 
 #include <iostream>
 
@@ -8,15 +7,19 @@ using namespace std;
 
 int main()
 {
-	int rides;
-	cout << "Enter the number of bike rides to campus: ";
-	cin >> rides;
 
-	while (rides < 0){
+// ask for number of bike rides
+	int bikeRides;
+	cout << "Enter the number of bike rides to campus: ";
+	cin >> bikeRides;
+
+	while (bikeRides < 0){
 		cout << "You have entered an invalid answer. Please try again: ";
-		cin >> rides;
+		cin >> bikeRides;
 	}
-	switch(rides){
+	
+// switch statement to determine the number of points that have been earned
+	switch(bikeRides){
 		case 0:
 			cout << "You earned 0 points this semester." << endl;
 			break;
