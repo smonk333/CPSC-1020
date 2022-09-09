@@ -1,4 +1,4 @@
-//	Calculating the amount in a retirement account
+//  Calculating the amount in a retirement account
 //  Garrett Boling
 
 #include <iostream>
