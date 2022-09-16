@@ -8,7 +8,7 @@ bool validateUserInput(float in){
     bool output {};
 
 //check to see if the input is greater than 0 (non-negative)
-    if (in > 0)
+    if (in >= 0)
          output = true;
     else if (in < 0)
         output = false;
