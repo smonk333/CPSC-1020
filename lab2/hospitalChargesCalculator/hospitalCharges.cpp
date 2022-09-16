@@ -78,7 +78,7 @@ int main(){
 
 //calculate the total charges and display the total before ending the program
     total = calcTotalCharges(daysIn, roomRate, labFees, medicationCharge);
-    cout << "Your total hospital bills is $" << fixed <<setprecision(2) << total;
+    cout << "Your total hospital bills is $" << fixed <<setprecision(2) << total << endl;
   }
 
 //if the patient is an outpatient...
@@ -106,7 +106,7 @@ int main(){
 
 //calculate the total charges and display the total before ending the program
     total = calcTotalCharges(labFees, medicationCharge);
-    cout << "Your total hospital bills is $" << fixed <<setprecision(2) << total;
+    cout << "Your total hospital bills is $" << fixed <<setprecision(2) << total << endl;
   }
 
   return 0;
