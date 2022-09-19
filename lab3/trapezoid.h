@@ -3,9 +3,9 @@
 
 class trapezoid {
     private:
-        base1: double;
-        base2: double;
-        height: double;
+        double base1; 
+        double base2;
+        double height;
     
     public:
 
