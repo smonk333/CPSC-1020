@@ -1,12 +1,11 @@
-#ifndef trapezoid
-#define trapezoid
+using namespace std;
 
 class trapezoid {
     private:
-        double base1; 
+        double base1;
         double base2;
         double height;
-    
+
     public:
 
 
