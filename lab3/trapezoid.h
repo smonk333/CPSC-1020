@@ -5,12 +5,11 @@ class trapezoid {
         double height;
 
     public:
-        bool setBase1(double base1);
-        bool setBase2(double base2);
-        bool setHeight(double height);
+        bool setBase1(double b1);
+        bool setBase2(double b2);
+        bool setHeight(double h);
         double getBase1();
         double getBase2();
         double getHeight();
         double calcArea();
-
 };

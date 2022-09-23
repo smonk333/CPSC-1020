@@ -5,4 +5,5 @@ class square{
     public:
         bool setSide(double s);
         double getSide();
+        double calcArea();
 };
