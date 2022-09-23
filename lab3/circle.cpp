@@ -20,11 +20,11 @@ double circle::getRadius(){
 
 bool circle::setRadius(double r){
 //check to see if the radius is negative. if yes, return false. if no, return true.
-    if(r < 0){
+    if (r < 0) {
         return false;
     }
 
-    else{
+    else {
         radius = r;
         return true;
     }
