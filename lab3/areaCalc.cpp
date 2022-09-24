@@ -83,7 +83,7 @@ int main(){
                 cin >> length;
             }
 
-            cout << "\nWidth: ";
+            cout << "Width: ";
             cin >> width;
 
             while (!myRectangle.setWidth(width)) {
@@ -110,7 +110,7 @@ int main(){
                 cin >> base1;
             }
 
-            cout << "\nBase2: ";
+            cout << "Base2: ";
             cin >> base2;
 
             while (!myTrapezoid.setBase2(base2)) {
@@ -118,7 +118,7 @@ int main(){
                 cin >> base2;
             }
 
-            cout << "\nHeight: ";
+            cout << "Height: ";
             cin >> height;
 
             while (!myTrapezoid.setHeight(height)) {
