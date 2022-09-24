@@ -37,7 +37,7 @@ int main(){
             circle myCircle;
 
 //get radius from user, and validate that it is positive
-            cout << "Radius: " << endl;
+            cout << "Radius: ";
             cin >> radius;
 
             while (!myCircle.setRadius(radius)) {
