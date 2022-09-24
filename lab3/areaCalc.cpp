@@ -21,7 +21,8 @@ int main(){
 //allow user to select a shape from the menu below
     cout << "1 -- circle\n2 -- square\n3 -- rectangle\n4 -- trapezoid\n5 -- quit" << endl;
     cin >> input;
-
+    cout << fixed;
+    
 //validate input
     while (input < 1 && input > 5) {
         cout << "Invalid selection. please try again." << endl;
