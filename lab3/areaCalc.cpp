@@ -56,7 +56,7 @@ int main(){
             square mySquare;
 
 //get side length from user, and validate that it is positive
-            cout << "Side: " << endl;
+            cout << "Side: ";
             cin >> side;
 
             while (!mySquare.setSide(side)) {
