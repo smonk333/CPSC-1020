@@ -131,7 +131,11 @@ int main(){
             break;
 
         case 5:
+
+//print exit message, exit program
             cout << "Goodbye!" << endl;
             return 0;
     }
+
+    return 0;
 }
