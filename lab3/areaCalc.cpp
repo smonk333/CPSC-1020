@@ -37,7 +37,7 @@ int main(){
             circle myCircle;
 
 //get radius from user, and validate that it is positive
-            cout << "Radius: ";
+            cout << "Radius: " << endl;
             cin >> radius;
 
             while (!myCircle.setRadius(radius)) {
@@ -56,7 +56,7 @@ int main(){
             square mySquare;
 
 //get side length from user, and validate that it is positive
-            cout << "Side: ";
+            cout << "Side: " << endl;
             cin >> side;
 
             while (!mySquare.setSide(side)) {
@@ -75,7 +75,7 @@ int main(){
             rectangle myRectangle;
 
 //get length and width from user, validate that they are positive
-            cout << "Length: ";
+            cout << "Length: " << endl;
             cin >> length;
 
             while (!myRectangle.setLength(length)) {
@@ -83,7 +83,7 @@ int main(){
                 cin >> length;
             }
 
-            cout << "\nWidth: ";
+            cout << "\nWidth: " << endl;
             cin >> width;
 
             while (!myRectangle.setWidth(width)) {
@@ -102,7 +102,7 @@ int main(){
             trapezoid myTrapezoid;
 
 //get base1, base2, and height from the user, validate that they are positive
-            cout << "Base1: ";
+            cout << "Base1: " << endl;
             cin >> base1;
 
             while (!myTrapezoid.setBase1(base1)) {
@@ -110,7 +110,7 @@ int main(){
                 cin >> base1;
             }
 
-            cout << "\nBase2: ";
+            cout << "\nBase2: " << endl;
             cin >> base2;
 
             while (!myTrapezoid.setBase2(base2)) {
@@ -118,7 +118,7 @@ int main(){
                 cin >> base2;
             }
 
-            cout << "\nHeight: ";
+            cout << "\nHeight: " << endl;
             cin >> height;
 
             while (!myTrapezoid.setHeight(height)) {
