@@ -1,4 +1,4 @@
-class circle{
+class Circle{
     private:
         double radius;
     

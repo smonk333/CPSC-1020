@@ -1,4 +1,4 @@
-class trapezoid {
+class Trapezoid {
     private:
         double base1;
         double base2;

@@ -1,4 +1,4 @@
-class rectangle{
+class Rectangle{
     private:
         double length;
         double width;

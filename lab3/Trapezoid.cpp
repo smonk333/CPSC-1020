@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double trapezoid::calcArea(){
+double Trapezoid::calcArea(){
 //create variable to hold output for cleaner return statement
     double out;
 //calculate area and return the total
@@ -12,19 +12,19 @@ double trapezoid::calcArea(){
     return out;
 }
 
-double trapezoid::getBase1(){
+double Trapezoid::getBase1(){
     return base1;
 }
 
-double trapezoid::getBase2(){
+double Trapezoid::getBase2(){
     return base2;
 }
 
-double trapezoid::getHeight(){
+double Trapezoid::getHeight(){
     return height;
 }
 
-bool trapezoid::setBase1(double b1){
+bool Trapezoid::setBase1(double b1){
 //check to see if input is less than 0. if yes, return false. if no, set the corresponding private variable to the input and return true.
     if (b1 < 0) {
         return false;
@@ -36,7 +36,7 @@ bool trapezoid::setBase1(double b1){
     }
 }
 
-bool trapezoid::setBase2(double b2){
+bool Trapezoid::setBase2(double b2){
 //check to see if input is less than 0. if yes, return false. if no, set the corresponding private variable to the input and return true.
     if (b2 < 0) {
         return false;
@@ -48,7 +48,7 @@ bool trapezoid::setBase2(double b2){
     }
 }
 
-bool trapezoid::setHeight(double h){
+bool Trapezoid::setHeight(double h){
 //check to see if input is less than 0. if yes, return false. if no, set the corresponding private variable to the input and return true.
     if (h < 0) {
         return false;

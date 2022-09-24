@@ -1,4 +1,4 @@
-class square{
+class Square{
     private:
         double side;
     

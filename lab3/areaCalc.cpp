@@ -33,8 +33,8 @@ int main(){
 
         case 1:
 
-//create object myCircle of type circle
-            circle myCircle;
+//create object myCircle of type Circle
+            Circle myCircle;
 
 //get radius from user, and validate that it is positive
             cout << "Radius: ";
@@ -52,8 +52,8 @@ int main(){
 
         case 2:
 
-//create object mySquare of type square
-            square mySquare;
+//create object mySquare of type Square
+            Square mySquare;
 
 //get side length from user, and validate that it is positive
             cout << "Side: ";
@@ -71,8 +71,8 @@ int main(){
 
         case 3:
 
-//create object myRectangle of type rectangle
-            rectangle myRectangle;
+//create object myRectangle of type Rectangle
+            Rectangle myRectangle;
 
 //get length and width from user, validate that they are positive
             cout << "Length: ";
@@ -98,8 +98,8 @@ int main(){
 
         case 4:
 
-//create object myTrapezoid of type trapezoid
-            trapezoid myTrapezoid;
+//create object myTrapezoid of type Trapezoid
+            Trapezoid myTrapezoid;
 
 //get base1, base2, and height from the user, validate that they are positive
             cout << "Base1: ";

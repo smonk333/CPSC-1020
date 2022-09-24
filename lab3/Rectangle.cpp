@@ -4,7 +4,7 @@
 
 using namespace std;
 
-double rectangle::calcArea(){
+double Rectangle::calcArea(){
 //declare variable to make return statement look nicer
     double out;
 
@@ -14,15 +14,15 @@ double rectangle::calcArea(){
     return out;
 }
 
-double rectangle::getLength(){
+double Rectangle::getLength(){
     return length;
 }
 
-double rectangle::getWidth(){
+double Rectangle::getWidth(){
     return width;
 }
 
-bool rectangle::setLength(double l){
+bool Rectangle::setLength(double l){
 //check if length is less than 0. if it is, return false. otherwise, return true.
     if (l < 0) {
         return false;
@@ -34,7 +34,7 @@ bool rectangle::setLength(double l){
     }
 }
 
-bool rectangle::setWidth(double w){
+bool Rectangle::setWidth(double w){
 //check if width is less than 0. if it is, return false. otherwise, return true.
     if (w < 0) {
         return false;
