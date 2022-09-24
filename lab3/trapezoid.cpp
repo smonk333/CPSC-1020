@@ -1,4 +1,4 @@
-#include "trapezoid.h"
+#include "Trapezoid.h"
 #include <iostream>
 #include <cmath>
 

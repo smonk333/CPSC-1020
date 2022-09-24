@@ -1,7 +1,7 @@
-#include "circle.h"
-#include "rectangle.h"
-#include "square.h"
-#include "trapezoid.h"
+#include "Circle.h"
+#include "Rectangle.h"
+#include "Square.h"
+#include "Trapezoid.h"
 #include <iostream>
 #include <iomanip>
 
