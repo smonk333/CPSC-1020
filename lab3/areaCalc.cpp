@@ -46,7 +46,7 @@ int main(){
             }
 
 //calculate area, and return area before exiting the program
-            cout << "\nArea: " << myCircle.calcArea() << endl;
+            cout << "Area: " << myCircle.calcArea() << endl;
 
             break;
 
@@ -65,7 +65,7 @@ int main(){
             }
 
 //calculate area, and return area before exiting the program
-            cout << "\nArea: " << mySquare.calcArea() << endl;
+            cout << "Area: " << mySquare.calcArea() << endl;
 
             break;
 
@@ -92,7 +92,7 @@ int main(){
             }
 
 //calculate area, and return area before exiting the program
-            cout << "\nArea: " << myRectangle.calcArea() << endl;
+            cout << "Area: " << myRectangle.calcArea() << endl;
 
             break;
 
@@ -126,7 +126,7 @@ int main(){
                 cin >> height;
             }
 //calculate area, and return area before exiting the program
-            cout << "\nArea: " << myTrapezoid.calcArea() << endl;
+            cout << "Area: " << myTrapezoid.calcArea() << endl;
 
             break;
 
