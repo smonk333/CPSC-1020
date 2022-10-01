@@ -68,7 +68,7 @@ bool Patient::validateInput(int in){
 }
 
 bool Patient::validateInput(char t){
-    if (t != 'I' || t != 'O') {
+    if (t != 'I' && t != 'O') {
         return false;
     }
     
