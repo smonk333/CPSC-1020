@@ -1,7 +1,7 @@
 COMPILER = g++
 OPTIONS = -Wall
 PROGRAM = hospitalCharges.out
-FILES = hospitalCharges.cpp patient.cpp patient.h
+FILES = hospitalCharges.cpp Patient.cpp Patient.h
 
 all: $(PROGRAM)
 

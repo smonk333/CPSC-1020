@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <cmath>
-#include "patient.h"
+#include "Patient.h"
 
 using namespace std;
 

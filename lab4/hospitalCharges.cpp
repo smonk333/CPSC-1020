@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include "patient.h"
+#include "Patient.h"
 
 using namespace std;
 
