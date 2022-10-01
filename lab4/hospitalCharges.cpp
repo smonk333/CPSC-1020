@@ -18,7 +18,6 @@ int main(){
   float roomRate;
   float labFees;
   float medicationCharge;
-  float total;
 
 
 //prompting the user for patient type
