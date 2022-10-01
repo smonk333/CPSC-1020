@@ -129,19 +129,6 @@ bool Patient::setMedication(double m){
 
 }
 
-bool Patient::setRate(double r){
-    //check to see if the number entered by the user is valid, return results and set number based on whether or not it's valid
-    if (validateInput(r) == false) {
-        return false;
-    }
-
-    else {
-        rate = r;
-        return true;
-    }
-
-}
-
 bool Patient::setPatientType(char t){
     //check to see if the number entered by the user is valid, return results and set number based on whether or not it's valid
     if (validateInput(t) == false) {
