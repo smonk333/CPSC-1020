@@ -15,6 +15,7 @@ class Patient{
     public:
         //public member function declarations
         Patient();
+        Patient(char t, double s, double m);
         Patient(int d, double r, double s, double m, char t);
         bool setDays(int d);
         bool setRate(double r);

@@ -15,6 +15,14 @@ Patient::Patient(){
     patientType = 'I';
 }
 
+Patient::Patient(char t, double s, double m){
+    days = 0.0;
+    rate = 0.0;
+    services = s;
+    medicine = m;
+    patientType = t;
+}
+
 Patient::Patient(int d, double r, double s, double m, char t){
     days = d;
     rate = r;
