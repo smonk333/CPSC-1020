@@ -13,73 +13,185 @@ Date::Date(){
 
 //default constructor, input
 Date::Date(int d, int m, int y){
-    //make variable Result, check dates using the checkDate function
-    int result = checkDate(d, m, y);
+    //check if year is valid using the setYear function, default to 2021 if not, set the year variable to y if it is
+    if (setYear(y) == true){
+        year = y;
+    }
 
-    switch(result) {
-        //date is fine, proceed to set values to user inputted values
-        case 0:
-            day = d;
-            month = m;
-            year = y;
-            break;
-        
-        //year is incorrect
-        case 1:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
-        
-        //month is incorrect
-        case 2:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
-        
-        //day is incorrect for months with 31 days
-        case 3:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
+    else {
+        year = 2021;
+    }
+    
+    //check if month is valid using the setMonth function, default to 1 if not, set the month variable to m if it is
+    if (setMonth(m) == true){
+        month = m;
+    }
 
-        //day is incorrect for months with 30 days
-        case 4:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
+    else {
+        month = 1;
+    }
 
-        //day is incorrect for february on a leap year
-        case 5:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
+    //check if day is valid using the setDay function, default to 1 if not, set the day variable to d if it is
+    if (setDay(d) == true){
+        day = d;
+    }
 
-        //day is incorrect for february on a non-leap year
-        case 6:
-            day = 1;
-            month = 1;
-            year = 2021;
-            break;
+    else {
+        day = 1;
     }
 }
 
 //defining setter methods to set the private variables to user input
 
 bool Date::setDay(int d){
-    int result = checkDate(d, month, year);
+    //set up array of the number of days in every month for reference in the switch statement
+    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
 
-    if (result != 0){
-        return false;
-    }
+    //use a switch statement dependent on the private variable month to determine if the inputted day is possible given the month
+    switch (month){
+        case 1:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
 
-    else {
-        day = d;
-        return true;
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 2:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 3:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 4:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 5:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 6:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 7:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 8:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 9:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 10:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 11:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
+
+        case 12:
+            if (d < 1 || d > daysMonth[month]) {
+                return false;
+            }
+
+            else if (d >= 1 && d <= daysMonth[month]) {
+                day = d;
+                return true;
+            }
+
+            break;
     }
 }
 
@@ -130,34 +242,3 @@ int Date::getYear(){
 string showDate(){
 
 }
-
-int checkDate(int day, int month, int year)
-{
-    int status=0; 
-
-    if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && ( day > 31 || day < 1) ) {
-        status = 3; 
-    }
-
-    else if ((month == 4 || month == 6 || month == 9 || month == 11) && (day > 30 || day<1) ) {
-        status = 4; 
-    }
-
-    else if ((month == 2) && (year % 4 == 0) && (day > 29 || day < 1)) {
-        status = 5; 
-    }
-
-    else if ((month == 2) && (year % 4 != 0) && (day > 28 || day < 1) ) {
-        status = 6; 
-    }
-
-    else if ((year < 2021) || (year > 2022)) {
-        status = 1;
-    }
-
-    if ((month < 1) || (month > 12)) {
-        status = 2;
-    }
-
-    return status;
-};
