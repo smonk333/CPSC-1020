@@ -116,12 +116,6 @@ int main(void){
 
                 diff = calcDays(exposureDate, vaccineDate);
             }
-
-
-
-
         }
     }
-
-
 }
