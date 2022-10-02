@@ -39,19 +39,20 @@ int main(void){
         
         //user tested negative, was not exposed
         if (exposure == "No"){
-            cout << "Length of isolation: 0 days";
+            cout << "Length of isolation: 0 days" << endl;
             return 0;
         }
 
         //user tested negative, was exposed. continue on to check vaccine status against exposure date
         else if (exposure == "Yes"){
-            cout << "Day of exposure: " << endl;
-            cin >> day;
 
-            cout << "Month of exposure: " << endl;
+            cout << "Month of exposure: ";
             cin >> month;
 
-            cout << "Year of exposure: " << endl;
+            cout << "Day of exposure: ";
+            cin >> day;
+
+            cout << "Year of exposure: ";
             cin >> year;
 
            
@@ -88,13 +89,13 @@ int main(void){
             
             //user was vaccinated. Gather date of 2nd vaccination, validate data, and calculate difference between vaccination date and exposure date
             else if (vaccine == "Yes"){
-                cout << "Day of 2nd vaccination: " << endl;
-                cin >> day;
-
-                cout << "Month of 2nd vaccination: " << endl;
+                cout << "Month of 2nd vaccination: ";
                 cin >> month;
 
-                cout << "Year of 2nd vaccination: " << endl;
+                cout << "Day of 2nd vaccination: ";
+                cin >> day;
+
+                cout << "Year of 2nd vaccination: ";
                 cin >> year;
 
            
@@ -116,7 +117,7 @@ int main(void){
 
                 diff = calcDays(exposureDate, vaccineDate);
 
-                cout << diff << endl;
+                if (diff )
             }
         }
     }
