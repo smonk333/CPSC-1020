@@ -82,7 +82,7 @@ int main(void){
 
             //user was not vaccinated, end program.
             if (vaccine == "No"){
-                cout << "Vaccination status at time of exposure: not fully vaccinated." << endl;
+                cout << "Vaccination status at time of exposure: not fully vaccinated" << endl;
                 cout << "Length of isolation: 10 days" << endl;
                 return 0;
             }

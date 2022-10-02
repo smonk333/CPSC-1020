@@ -46,11 +46,12 @@ Date::Date(int d, int m, int y){
 bool Date::setDay(int d){
     //set up array of the number of days in every month for reference in the switch statement
     int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
-
+    
     //use a switch statement dependent on the private variable month to determine if the inputted day is possible given the month
     switch (month){
         case 1:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -63,6 +64,7 @@ bool Date::setDay(int d){
 
         case 2:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -75,6 +77,7 @@ bool Date::setDay(int d){
 
         case 3:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -87,6 +90,7 @@ bool Date::setDay(int d){
 
         case 4:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -99,6 +103,7 @@ bool Date::setDay(int d){
 
         case 5:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -111,6 +116,7 @@ bool Date::setDay(int d){
 
         case 6:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -123,6 +129,7 @@ bool Date::setDay(int d){
 
         case 7:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -135,6 +142,7 @@ bool Date::setDay(int d){
 
         case 8:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -147,6 +155,7 @@ bool Date::setDay(int d){
 
         case 9:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -159,6 +168,7 @@ bool Date::setDay(int d){
 
         case 10:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -171,6 +181,7 @@ bool Date::setDay(int d){
 
         case 11:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -183,6 +194,7 @@ bool Date::setDay(int d){
 
         case 12:
             if (d < 1 || d > daysMonth[month]) {
+                day = 1;
                 return false;
             }
 
@@ -193,6 +205,7 @@ bool Date::setDay(int d){
 
             break;
     }
+    return false;
 }
 
 bool Date::setMonth(int m){
