@@ -210,10 +210,12 @@ bool Date::setDay(int d){
 
 bool Date::setMonth(int m){
     if (m < 1) {
+        month = 1;
         return false;
     }
 
     else if (m > 12) {
+        month = 1;
         return false;
     }
     
@@ -256,7 +258,7 @@ string Date::showDate(){
     string d = to_string(day);
     string m = to_string(month);
     string y = to_string(year);
-    string date = d + "/" + m + "/" + y;
+    string date = m + "/" + d + "/" + y;
 
     return date;
 }
