@@ -59,6 +59,7 @@ bool Date::setDay(int d){
         day = 1;
         return false;
     }
+    return false;
 }
 
 bool Date::setMonth(int m){
@@ -71,6 +72,7 @@ bool Date::setMonth(int m){
         month = m;
         return true;
     }
+    return false;
 }
 
 bool Date::setYear(int y){
@@ -83,6 +85,7 @@ bool Date::setYear(int y){
         year = y;
         return true;
     }
+    return false;
 }
 
 //defining getter methods to return private variables
