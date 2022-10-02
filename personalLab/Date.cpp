@@ -41,8 +41,6 @@ Date::Date(int d, int m, int y){
     else if (d < 1 || d > daysMonth[month - 1]){
         day = 1;
     }
-
-
 }
 
 //defining setter methods to set the private variables to user input
