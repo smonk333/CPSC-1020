@@ -117,7 +117,17 @@ int main(void){
 
                 diff = calcDays(exposureDate, vaccineDate);
 
-                if (diff )
+                if (diff >= 14){
+                    cout << "Vaccination status at time of exposure: fully vaccinated" << endl;
+                    cout << "Length of isolation: 5 days" << endl;
+                    return 0;
+                }
+
+                else if (diff < 14){
+                    cout << "Vaccination status at time of exposure: not fully vaccinated" << endl;
+                    cout << "Length of isolation: 10 days" << endl;
+                    return 0;
+                }
             }
         }
     }
