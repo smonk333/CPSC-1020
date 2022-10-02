@@ -115,6 +115,8 @@ int main(void){
                 }
 
                 diff = calcDays(exposureDate, vaccineDate);
+
+                cout << diff << endl;
             }
         }
     }
