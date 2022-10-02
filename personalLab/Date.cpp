@@ -192,9 +192,6 @@ bool Date::setDay(int d){
             }
 
             break;
-
-        default: 
-            return false;
     }
 }
 
