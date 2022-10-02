@@ -30,6 +30,6 @@ int calcDays(Date vaccine, Date exposure){
     diffDay1 = vaccineInt - testDate;
     diffDay2 = exposureInt - testDate;
 
-    return diffDay2 - diffDay1;
+    return diffDay1 - diffDay2;
 }
 
