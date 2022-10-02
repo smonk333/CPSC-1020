@@ -131,4 +131,9 @@ int main(void){
             }
         }
     }
+
+    else if (results == "positive"){
+        cout << "Length of isolation: 5 days" << endl;
+        return 0;
+    }
 }
