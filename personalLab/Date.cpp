@@ -252,6 +252,11 @@ int Date::getYear(){
     return year;
 }
 
-string showDate(){
-    return "test";
+string Date::showDate(){
+    string d = to_string(day);
+    string m = to_string(month);
+    string y = to_string(year);
+    string date = d + "/" + m + "/" + y;
+
+    return date;
 }
