@@ -6,9 +6,6 @@
 using namespace std;
 
 int main(void){
-    Date exposureDate;
-    Date vaccineDate;
-
     string exposure;
     string results;
     string vaccine;
@@ -53,28 +50,13 @@ int main(void){
             cout << "Month of exposure: ";
             cin >> monthExp;
 
-            while (!exposureDate.setMonth(monthExp)){
-                cout << "Invalid month. Try again" << endl;
-                cin >> monthExp;
-            }
-
             cout << "Day of exposure: ";
             cin >> dayExp;
-
-            while (!exposureDate.setDay(dayExp)){
-                cout << "Invalid day. Try again" << endl;
-                cin >> dayExp;
-            }
 
             cout << "Year of exposure: ";
             cin >> yearExp;
 
-            while (!exposureDate.setYear(yearExp)){
-                cout << "Invalid year. Try again" << endl;
-                cin >> yearExp;
-            }
-
-
+            Date exposureDate(dayExp, monthExp, yearExp);
 
             cout << "Second vaccine dose received: ";
             cin >> vaccine;
@@ -92,38 +74,18 @@ int main(void){
             }
             
             //user was vaccinated. Gather date of 2nd vaccination, validate data, and calculate difference between vaccination date and exposure date
+            //gather data and validate, reject if invalid.
             else if (vaccine == "Yes"){
                 cout << "Month of 2nd vaccination: ";
                 cin >> monthVac;
 
-                while (!vaccineDate.setMonth(monthVac)){
-                    cout << "Invalid month. Try again" << endl;
-                    cin >> monthVac;
-                }
-
                 cout << "Day of 2nd vaccination: ";
                 cin >> dayVac;
-
-                while (!vaccineDate.setDay(dayVac)){
-                    cout << "Invalid day. Try again" << endl;
-                    cin >> dayVac;
-                }
 
                 cout << "Year of 2nd vaccination: ";
                 cin >> yearVac;
 
-                while (!vaccineDate.setYear(yearVac)){
-                    cout << "Invalid year. Try again" << endl;
-                    cin >> yearVac;
-                }
-
-           
-                //input validation, setting private variables of object vaccineDate
-
-
-
-
-
+                Date vaccineDate(dayVac, monthVac, yearVac);
 
                 diff = calcDays(exposureDate, vaccineDate);
 
