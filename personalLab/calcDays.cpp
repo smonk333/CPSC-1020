@@ -1,25 +1,21 @@
-#include <iostream>
-#include <cmath>
 #include "calcDays.h"
-#include <cstdlib>
-
 using namespace std;
 
 int calcDays(Date vaccine, Date exposure){
-    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
+    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int diffDay1;
     int diffDay2;
     int vaccineInt = (vaccine.getYear() * 365); //begin converting the dates to a single number, initialize new variables to hold these integers
     int exposureInt = (exposure.getYear() * 365);
-    int testDate = (2021 * 365) + (1 * daysMonth[1]) + (1);
+    int testDate = (2021 * 365) + (1 * daysMonth[0]) + (1);
 
     //add the number of days in each month up to the month of each Date object to the vaccineInt and exposureInt variables
     for (int i = vaccine.getMonth(); i > 0; i--){
-        vaccineInt += daysMonth[i];
+        vaccineInt += daysMonth[i - 1];
     }
 
     for (int i = exposure.getMonth(); i > 0; i--){
-        exposureInt += daysMonth[i];
+        exposureInt += daysMonth[i - 1];
     }
 
     //add the days in each date object to the vaccineInt and exposureInt

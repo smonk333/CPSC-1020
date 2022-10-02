@@ -14,7 +14,7 @@ Date::Date(){
 //default constructor, input
 Date::Date(int d, int m, int y){
     //check if year is valid using the setYear function, default to 2021 if not, set the year variable to y if it is
-    if (setYear(y) == true){
+    if (setYear(y)){
         year = y;
     }
 
@@ -23,7 +23,7 @@ Date::Date(int d, int m, int y){
     }
     
     //check if month is valid using the setMonth function, default to 1 if not, set the month variable to m if it is
-    if (setMonth(m) == true){
+    if (setMonth(m)){
         month = m;
     }
 
@@ -32,7 +32,7 @@ Date::Date(int d, int m, int y){
     }
 
     //check if day is valid using the setDay function, default to 1 if not, set the day variable to d if it is
-    if (setDay(d) == true){
+    if (setDay(d)){
         day = d;
     }
 
@@ -45,176 +45,22 @@ Date::Date(int d, int m, int y){
 
 bool Date::setDay(int d){
     //set up array of the number of days in every month for reference in the switch statement
-    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30};
+    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     
-    //use a switch statement dependent on the private variable month to determine if the inputted day is possible given the month
-    switch (month){
-        case 1:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 2:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 3:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 4:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 5:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 6:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 7:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 8:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 9:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 10:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 11:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
-
-        case 12:
-            if (d < 1 || d > daysMonth[month]) {
-                day = 1;
-                return false;
-            }
-
-            else if (d >= 1 && d <= daysMonth[month]) {
-                day = d;
-                return true;
-            }
-
-            break;
+    //make sure day is valid, if yes, set days to user inputted value. if no, default to 1.
+    if (d >= 1 && d <= daysMonth[month - 1]){
+        day = d;
+        return true;
     }
-    return false;
+
+    else if (d < 1 || d > daysMonth[month - 1]){
+        day = 1;
+        return false;
+    }
 }
 
 bool Date::setMonth(int m){
-    if (m < 1) {
-        month = 1;
-        return false;
-    }
-
-    else if (m > 12) {
+    if (m < 1 || m > 12) {
         month = 1;
         return false;
     }
@@ -226,11 +72,8 @@ bool Date::setMonth(int m){
 }
 
 bool Date::setYear(int y){
-    if (y < 2021) {
-        return false;
-    }
-
-    else if (y > 2022) {
+    if (y < 2021 || y > 2022) {
+        year = 2021;
         return false;
     }
     
