@@ -13,16 +13,11 @@ Date::Date(){
 
 //default constructor, input
 Date::Date(int d, int m, int y){
-    //if any of the setter functions fail, call the default constructor
+    //if any of the setter functions fail, set items to default
     if (!setYear(y) || !setMonth(m) || !setDay(d)){
-        Date();
-    }
-
-    //otherwise, use the setter function to set the private variables to the user inputted values.
-    else {
-        setYear(y);
-        setMonth(m);
-        setDay(d);
+        year = 2021;
+        month = 1;
+        day = 1;
     }
 }
 
