@@ -2,7 +2,6 @@
 #include <cmath>
 #include "calcDays.h"
 #include <cstdlib>
-#include "Date.h"
 
 using namespace std;
 
