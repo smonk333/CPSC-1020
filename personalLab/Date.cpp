@@ -13,32 +13,36 @@ Date::Date(){
 
 //default constructor, input
 Date::Date(int d, int m, int y){
-    //check if year is valid using the setYear function, default to 2021 if not, set the year variable to y if it is
-    if (setYear(y)){
+    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    //validate year, if invalid, default to 2021
+    if (y < 2021 || y > 2022) {
+        year = 2021;
+    }
+
+    else {
         year = y;
     }
 
-    else {
-        year = 2021;
-    }
-    
-    //check if month is valid using the setMonth function, default to 1 if not, set the month variable to m if it is
-    if (setMonth(m)){
-        month = m;
-    }
-
-    else {
+    //validate month, if invalid, default to 1
+    if (m < 1 || m > 12) {
         month = 1;
     }
 
-    //check if day is valid using the setDay function, default to 1 if not, set the day variable to d if it is
-    if (setDay(d)){
+    else {
+        month = m;
+    }
+
+    //validate day, if invalid, default to 1
+    if (d >= 1 && d <= daysMonth[month - 1]){
         day = d;
     }
 
-    else {
+    else if (d < 1 || d > daysMonth[month - 1]){
         day = 1;
     }
+
+
 }
 
 //defining setter methods to set the private variables to user input
