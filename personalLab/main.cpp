@@ -18,7 +18,7 @@ int main(void){
     int diff;
 
     //gather data from the user
-    cout << "Test result: " << endl;
+    cout << "Test result: ";
     cin >> results;
 
     //input validation, because reading is hard sometimes.
@@ -29,7 +29,7 @@ int main(void){
 
     //check if user was exposed to a positive case, validate input
     if (results == "negative"){
-        cout << "Exposed to positive case: " << endl;
+        cout << "Exposed to positive case: ";
         cin >> exposure;
 
         while (exposure != "Yes" && exposure != "No"){
@@ -72,7 +72,7 @@ int main(void){
                 cin >> day;
             }
 
-            cout << "Second vaccine dose received: " << endl;
+            cout << "Second vaccine dose received: ";
             cin >> vaccine;
 
             while (vaccine != "Yes" && vaccine != "No"){
