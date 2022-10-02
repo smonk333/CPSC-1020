@@ -240,5 +240,5 @@ int Date::getYear(){
 }
 
 string showDate(){
-
+    return "test";
 }
