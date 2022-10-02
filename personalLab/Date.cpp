@@ -13,33 +13,16 @@ Date::Date(){
 
 //default constructor, input
 Date::Date(int d, int m, int y){
-    int daysMonth[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
-    //validate year, if invalid, default to 2021
-    if (y < 2021 || y > 2022) {
-        year = 2021;
+    //if any of the setter functions fail, call the default constructor
+    if (!setYear(y) || !setMonth(m) || !setDay(d)){
+        Date();
     }
 
+    //otherwise, use the setter function to set the private variables to the user inputted values.
     else {
-        year = y;
-    }
-
-    //validate month, if invalid, default to 1
-    if (m < 1 || m > 12) {
-        month = 1;
-    }
-
-    else {
-        month = m;
-    }
-
-    //validate day, if invalid, default to 1
-    if (d >= 1 && d <= daysMonth[month - 1]){
-        day = d;
-    }
-
-    else if (d < 1 || d > daysMonth[month - 1]){
-        day = 1;
+        setYear(y);
+        setMonth(m);
+        setDay(d);
     }
 }
 
@@ -108,5 +91,6 @@ string Date::showDate(){
     string y = to_string(year);
     string date = m + "/" + d + "/" + y;
 
+    cout << date << endl;
     return date;
 }
