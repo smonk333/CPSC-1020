@@ -10,12 +10,12 @@ int calcDays(Date vaccine, Date exposure){
     int testDate = (2021 * 365) + (1 * daysMonth[0]) + (1);
 
     //add the number of days in each month up to the month of each Date object to the vaccineInt and exposureInt variables
-    for (int i = vaccine.getMonth() - 1; i > 0; i--){
-        vaccineInt += daysMonth[i];
+    for (int i = vaccine.getMonth(); i - 1 >= 0; i--){
+        vaccineInt += daysMonth[i - 1];
     }
 
-    for (int i = exposure.getMonth() - 1; i > 0; i--){
-        exposureInt += daysMonth[i];
+    for (int i = exposure.getMonth(); i - 1 >= 0; i--){
+        exposureInt += daysMonth[i - 1];
     }
 
     //add the days in each date object to the vaccineInt and exposureInt
