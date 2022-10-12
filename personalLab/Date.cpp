@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 #include "Date.h"
 
 using namespace std;
@@ -68,19 +67,19 @@ bool Date::setYear(int y){
 
 //defining getter methods to return private variables
 
-int Date::getDay(){
+int Date::getDay() const{
     return day;
 }
 
-int Date::getMonth(){
+int Date::getMonth() const{
     return month;
 }
 
-int Date::getYear(){
+int Date::getYear() const{
     return year;
 }
 
-string Date::showDate(){
+string Date::showDate() const{
     string d = to_string(day);
     string m = to_string(month);
     string y = to_string(year);

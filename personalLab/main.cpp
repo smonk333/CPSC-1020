@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main(void){
+int main(){
     string exposure;
     string results;
     string vaccine;
