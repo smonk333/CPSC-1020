@@ -1,6 +1,7 @@
 #include <iostream>
 #include "customerType.h"
 #include "Vehicle.h"
+#include "Invoice.h"
 
 using namespace std;
 
@@ -162,15 +163,12 @@ int main()
 
 //Permit Type
     int pInput;
+    Invoice invoice;
+
     do {
         cout << "What is your permit type?\n" << "1: Semester\n" << "2: Annual\n" << "3: Daily" << endl;
         cin >> pInput;
-    } while (Invoice.setPermitType(pInput));
+    } while (invoice.setPermitType(pInput));
 
 
-    Invoice.printRecipt(customerInput, vehicleInput, Invoice.getPermitType()
-
-
-
-
-//if there are multiple words in a string (separated by spaces), use getLine
+    invoice.printReceipt();
