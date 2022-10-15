@@ -1,6 +1,4 @@
 #include "Invoice.h"
-#include "Vehicle.h"
-#include "customerType.h"
 #include <iostream>
 #include <string>
 
@@ -12,30 +10,26 @@ Invoice::Invoice() {
 
 bool Invoice::setPermitType(int p) {
 	switch (p) {
-        case 1:{
+        case 1: {
 		    permitType = p;
 		    permitName = "Annual";
 		    return true;
-            break;
         }
 
         case 2: {
 		    permitType = p;
 		    permitName = "Semester";
 		    return true;
-            break;
 	    }
 
 	    case 3: {
 		    permitType = p;
 		    permitName = "Daily";
 		    return true;
-            break;
 	    }
 
 	    default: {
             return false;
-            break;
         }
 	}
 	
@@ -79,17 +73,20 @@ int Invoice::calcTotal(int customer, int vehicle, int permit) {
 	//Price adjust to permit type
 	switch (permit) {
 		//Annual price is not changed
-	case 1:
-		total = total;
-		break;
-		//Semester price is halved
-	case 2:
-		total = .5 * total;
-		break;
-		//Daily price is constant regardless of vehicle and customer
-	case 3:
-		total = priceDaily;
-		break;
+	    case 1: {
+            total = total;
+            break;
+        }
+		    //Semester price is halved
+	    case 2: {
+            total = .5 * total;
+            break;
+        }
+	    	//Daily price is constant regardless of vehicle and customer
+	    case 3: {
+            total = priceDaily;
+           break;
+        }
 	}
 
 	//Apply discount
@@ -97,13 +94,18 @@ int Invoice::calcTotal(int customer, int vehicle, int permit) {
 	if (vehicle == 1) {
 		total = total * discount;
 	}
+    //discount: if the user is a sedan-driving vendor, the price of the permit is free (plus the service charge)
+    if (customer == 4 && vehicle == 4){
+        total = 0;
+    }
 
-	//Apply service chagre
+	//Apply service charge
 	total += serviceCharge;
 	
 	return total;
 }
-void Invoice::printReceipt() {
-	cout << "Permit Type: " << permitName << endl;
-	cout << "Total Price : " << total << endl;
+void Invoice::printReceipt(int customer, int vehicle, int permit) {
+    calcTotal(customer, vehicle, permit);
+    cout << "Permit Type: " << permitName << endl;
+    cout << "Total Price : " << total << endl;
 }
