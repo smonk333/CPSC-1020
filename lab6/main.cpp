@@ -4,8 +4,11 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <string>
 #include "date.h"
 
-int main(int argc, char const *argv[]){
+using namespace std;
 
+int main(int argc, char const *argv[]){
+    ifstream &argv[1]
 }
