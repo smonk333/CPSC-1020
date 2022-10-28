@@ -18,7 +18,7 @@ class Invoice{
 		int getPermitType();
 		string getPermitName();
 		int calcTotal(int customer, int vehicle, int permit);
-		void printReceipt();
+		void printReceipt(int customer, int vehicle, int permit);
 };
 
 #endif
